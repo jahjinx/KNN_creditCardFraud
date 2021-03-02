@@ -16,16 +16,15 @@ This project uses a credit card fraud dataset [available on Kaggle](https://http
 
 The dataset contains transactions made by credit cards in September 2013 by European cardholders. It presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions.
 
-The dataset contains only numerical input variables which are the result of a PCA transformation. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependant cost-sensitive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
+The dataset contains only numerical input variables which are the result of a PCA transformation. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependent cost-sensitive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
 
 
 ## Results
 
-We tested a number of models using different scaling methods, feature sets, and both balanced and unbalanced data. We compared the results of each after hyperparameter optimization using GridSearchCV and selected the following settings for our final model:
+We tested a number of K-Nearest Neighbors models using different scaling methods, feature sets, and both balanced and unbalanced data. We compared the results of each after hyperparameter optimization using GridSearchCV and selected the following settings for our final model:
 
 **Scaling**<br />
 Minmax
-
 
 **Features**<br />
 ['V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V9', 'V10', 'V11', 'V12', 'V14', 'V16', 'V17', 'V18']<br />
